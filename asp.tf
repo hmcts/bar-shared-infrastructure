@@ -7,4 +7,5 @@ module "appServicePlan" {
   asp_name = "bar-asp"
   ase_name = "${local.ase_name}"
   tag_list = "${local.common_tags}"
+  dummy="dummy"
 }
