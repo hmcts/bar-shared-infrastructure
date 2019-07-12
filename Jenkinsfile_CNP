@@ -9,5 +9,6 @@ Environment environment = new Environment(env)
 onMaster {
   sharedInfrastructurePipeline('bar', environment.nonProdName, 'nonprod')
   sharedInfrastructurePipeline('bar', environment.demoName, 'nonprod')
+  sharedInfrastructurePipeline('bar', environment.perftestName, 'nonprod')
   sharedInfrastructurePipeline('bar', environment.prodName, 'prod')
 }
