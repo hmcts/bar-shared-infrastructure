@@ -1,7 +1,7 @@
 locals {
   sku_size = "${var.env == "prod" || var.env == "aat" ? "I2" : "I1"}"
 }
-module "appServicePlan" {
+/*module "appServicePlan" {
   source = "git@github.com:hmcts/cnp-module-app-service-plan?ref=master"
   location = "${var.location}"
   env = "${var.env}"
@@ -11,4 +11,4 @@ module "appServicePlan" {
   asp_name = "bar-asp"
   ase_name = "${local.ase_name}"
   tag_list = "${local.common_tags}"
-}
+}*/
