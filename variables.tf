@@ -24,11 +24,6 @@ variable "application_type" {
   default     = "web"
   description = "Type of Application Insights (Web/Other)"
 }
-
-variable "managed_identity_object_id" {
-  default = ""
-}
-
 variable "tenant_id" {
   description = "(Required) The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. This is usually sourced from environemnt variables and not normally required to be specified."
 }
