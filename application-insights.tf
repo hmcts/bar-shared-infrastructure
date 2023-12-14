@@ -9,7 +9,7 @@ module "application_insights" {
 
   common_tags = var.common_tags
 
-  location - var.appinsights_location
+  location = var.appinsights_location
 }
 
 moved {
