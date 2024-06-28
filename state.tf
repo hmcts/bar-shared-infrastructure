@@ -2,11 +2,11 @@
 terraform {
   backend "azurerm" {}
   required_providers {
-        azurerm = {
-          source  = "hashicorp/azurerm"
-          version = "~> 3.46.0"
-        }
-      }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.110.0"
+    }
+  }
 }
 
 
@@ -14,7 +14,7 @@ data "terraform_remote_state" "core_apps_infrastructure" {
   backend = "azurerm"
 
   config = {
-    resource_group_name  = join("-",["mgmt-state-store",var.subscription])
+    resource_group_name  = join("-", ["mgmt-state-store", var.subscription])
     storage_account_name = "mgmtstatestore${var.subscription}"
     container_name       = "mgmtstatestorecontainer${var.env}"
     key                  = "core-infra/${var.env}/terraform.tfstate"
