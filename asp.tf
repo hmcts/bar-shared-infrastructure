@@ -1,5 +1,5 @@
 locals {
-  sku_size = "${var.env == "prod" || var.env == "aat" ? "I2" : "I1"}"
+  sku_size = var.env == "prod" || var.env == "aat" ? "I2" : "I1"
 }
 /*module "appServicePlan" {
   source = "git@github.com:hmcts/cnp-module-app-service-plan?ref=master"
